@@ -9,7 +9,7 @@ dp = Dispatcher(bot)
 async def start(message: types.Message):
     markup = types.ReplyKeyboardMarkup()
     markup.add(types.KeyboardButton('Открыть веб страницу',
-                                          web_app=WebAppInfo(url='https://itproger.com/telegram.html')))
+                                          web_app=WebAppInfo(url='https://github.com/sergey5478/Telegram/blob/main/index.html')))
     await message.reply('Hello', reply_markup=markup)
 
 
