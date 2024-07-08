@@ -14,6 +14,3 @@ async def start(message: types.Message):
 
 
 executor.start_polling(dp)
-
-
-
