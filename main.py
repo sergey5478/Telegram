@@ -8,16 +8,16 @@ dp = Dispatcher(bot)
 
 @dp.message_handler(commands=['start'])
 async def start(message: types.Message):
-    markup = types.ReplyKeyboardMarkup() #InlineKeyboardMarkup
+    markup = types.ReplyKeyboardMarkup()
     markup.add(types.KeyboardButton('Открыть веб страницу',
                                           web_app=WebAppInfo(url='https://sergey5478.github.io/Telegram/')))
     await message.answer('Hello', reply_markup=markup)
 
 
-@dp.message_handler(content_types=['web_app_data'])
-async def web_app(message: types.Message):
-    res = json.loads(message.web_app_data.data)
-    await message.answer(f'{res["name"]}, {res["email"]}')
+# @dp.message_handler(content_types=['web_app_data'])
+# async def web_app(message: types.Message):
+#     res = json.loads(message.web_app_data.data)
+#     await message.answer(f'{res["name"]}, {res["email"]}')
 
 
 executor.start_polling(dp)
