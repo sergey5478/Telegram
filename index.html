@@ -112,18 +112,19 @@
                 let name = document.getElementById("user_name").value;
                 let email = document.getElementById("user_email").value;
                 let phone = document.getElementById("user_phone").value;
-<!--                 if(name.length) < 5 { -->
-<!--                     document.getElementById("error").innerText = 'Ошибка в имени'; -->
-<!--                     return; -->
-<!--                 } -->
-<!--                 if(email.length) < 5 { -->
-<!--                     document.getElementById("error").innerText = 'Ошибка в email'; -->
-<!--                     return; -->
-<!--                 } -->
-<!--                 if(phone.length) < 5 { -->
-<!--                     document.getElementById("error").innerText = 'Ошибка в phone'; -->
-<!--                     return; -->
-<!--                 } -->
+                if(name.length) < 5 {
+                    document.getElementById("error").innerText = 'Ошибка 1';
+                    name.value = "Success";
+                    return;
+                }
+                if(email.length) < 5 {
+                    document.getElementById("error").innerText = 'Ошибка 2';
+                    return;
+                }
+                if(phone.length) < 5 {
+                    document.getElementById("error").innerText = 'Ошибка 3';
+                    return;
+                }
                 let data = {
                     name: name,
                     email: email,

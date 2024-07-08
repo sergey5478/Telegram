@@ -14,10 +14,10 @@ async def start(message: types.Message):
     await message.answer('Hello', reply_markup=markup)
 
 
-# @dp.message_handler(content_types=['web_app_data'])
-# async def web_app(message: types.Message):
-#     res = json.loads(message.web_app_data.data)
-#     await message.answer(f'{res["name"]}, {res["email"]}')
+@dp.message_handler(content_types=['web_app_data'])
+async def web_app(message: types.Message):
+    res = json.loads(message.web_app_data.data)
+    await message.answer(f'{res["name"]}, {res["email"]}')
 
 
 executor.start_polling(dp)
