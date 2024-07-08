@@ -108,14 +108,14 @@
             });
 
             order.addEventListener("click", () => {
-<!--                 document.getElementById("error").innerText = ''; -->
+                document.getElementById("error").innerText = 'Something Is Off';
                 let name = document.getElementById("user_name").value;
 <!--                 let email = document.getElementById("user_email").value; -->
 <!--                 let phone = document.getElementById("user_phone").value; -->
-<!--                 if(name.length) < 5 { -->
-<!--                     document.getElementById("error").innerText = 'Ошибка 1'; -->
-<!--                     return; -->
-<!--                 } -->
+                if(name.length) < 5 {
+                    document.getElementById("error").innerText = 'Ошибка 1';
+                    return;
+                }
 <!--                 if(email.length) < 5 { -->
 <!--                     document.getElementById("error").innerText = 'Ошибка 2'; -->
 <!--                     return; -->
@@ -130,7 +130,6 @@
 <!--                     phone: phone -->
 <!--                 } -->
 <!--                 tg.sendData(JSON.stringify(data)); -->
-                name = "Workable";
 <!--                 tg.close(); -->
             });
         </script>
